@@ -11,8 +11,12 @@ public Boxeador(string nombre, string pais, int peso, int pG, int vP){
     Nombre = nombre;
     Pais = pais;
     Peso = peso;
-    PotenciaGolpes = pG;    
-    VelocidadPiernas = vP;
+    if(pG >= 1 && pG <= 100){
+        PotenciaGolpes = pG; 
+    }   
+    if(vP > 0 && vP <= 100){
+        VelocidadPiernas = vP;
+    }
 }
 
 public double ObtenerSkill(){
